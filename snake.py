@@ -6,10 +6,10 @@ from random import randint
 pygame.init()
 
 pygame.mixer.music.set_volume(0.1)
-musica_de_fundo = pygame.mixer.music.load('BoxCat_Games_-_08_-_CPU_Talk (1).mp3')
+musica_de_fundo = pygame.mixer.music.load('settings\BoxCat Games - CPU Talk.mp3')
 pygame.mixer.music.play(-1)
 
-barulho_colisao = pygame.mixer.Sound('smw_coin (1).wav')
+barulho_colisao = pygame.mixer.Sound('settings\smw_coin.wav')
 
 largura = 640
 altura = 480
@@ -26,10 +26,10 @@ x_maca = randint(40, 600)
 y_maca = randint(50, 430)
 
 pontos = 0
-fonte = pygame.font.SysFont('arial', 40, bold=True, italic=True)
+fonte = pygame.font.SysFont('arial', 20, bold=True, italic=True)
 
 tela = pygame.display.set_mode((largura, altura))
-pygame.display.set_caption('Jogo')
+pygame.display.set_caption('Snake')
 relogio = pygame.time.Clock()
 lista_cobra = []
 comprimento_inicial = 5
@@ -41,7 +41,7 @@ def aumenta_cobra(lista_cobra):
         #XeY[0] = x
         #XeY[1] = y
 
-        pygame.draw.rect(tela, (0,255,0), (XeY[0], XeY[1], 20, 20))
+        pygame.draw.rect(tela, (178,0,211), (XeY[0], XeY[1], 20, 20))
 
 def reiniciar_jogo():
     global pontos, comprimento_inicial, x_cobra, y_cobra, lista_cobra, lista_cabeca, x_maca, y_maca, morreu
