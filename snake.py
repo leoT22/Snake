@@ -53,6 +53,14 @@ while True:
     x_cobra = x_cobra + x_controle
     y_cobra = y_cobra + y_controle
 
+ if cobra.colliderect(maca):
+        x_maca = randint(40, 600)
+        y_maca = randint(50, 430)
+        pontos += 1
+        barulho_colisao.play()
+        comprimento_inicial = comprimento_inicial + 1
+
+
 x_cobra = int(largura/2) 
 y_cobra = int(altura/2)
 
