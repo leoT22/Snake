@@ -2,6 +2,48 @@ import pygame
 from pygame.locals import *
 from sys import exit
 from random import randint
+import os
+import time
+
+os.system("cls")
+print("\n************************")
+print("Snake Game")
+print("************************\n")
+
+print("\nAutores: Leonardo Telles, Matheus Basso\n")
+print("\n")
+
+time.sleep(4)
+os.system("cls")
+print("")
+
+while True:
+    nome = input("Insira seu nome: ")
+    arquivo = open('nomes.txt', 'a')
+    arquivo.write(nome + "\n")
+    print("\nNome adicionado ao documento " + arquivo.name)
+    arquivo.close
+    break
+
+while True:
+    email = input("\nInsira seu email: ")
+    arquivo = open('email.txt', 'a')
+    arquivo.write(email + "\n")
+    print("\nNome adicionado ao documento " + arquivo.name)
+    arquivo.close
+    break
+
+time.sleep(2)
+
+os.system("cls")
+print("\n")
+print("Agradecemos por ter baixado nosso game\nAproveite!")
+
+
+time.sleep(3)
+
+exit
+
 
 pygame.init()
 
@@ -68,25 +110,25 @@ while True:
             exit()
         
         if event.type == KEYDOWN:
-            if event.key == K_a:
+            if event.key == K_LEFT:
                 if x_controle == velocidade:
                     pass
                 else:
                     x_controle = -velocidade
                     y_controle = 0
-            if event.key == K_d:
+            if event.key == K_RIGHT:
                 if x_controle == -velocidade:
                     pass
                 else:
                     x_controle = velocidade
                     y_controle = 0
-            if event.key == K_w:
+            if event.key == K_UP:
                 if y_controle == velocidade:
                     pass
                 else:
                     y_controle = -velocidade
                     x_controle = 0
-            if event.key == K_s:
+            if event.key == K_DOWN:
                 if y_controle == -velocidade:
                     pass
                 else:
