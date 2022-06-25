@@ -16,6 +16,7 @@ print("\n")
 time.sleep(4)
 os.system("cls")
 print("")
+print("")
 
 while True:
     nome = input("Insira seu nome: ")
