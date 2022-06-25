@@ -30,7 +30,7 @@ while True:
     email = input("\nInsira seu email: ")
     arquivo = open('email.txt', 'a')
     arquivo.write(email + "\n")
-    print("\nNome adicionado ao documento " + arquivo.name)
+    print("\nEmail adicionado ao documento " + arquivo.name)
     arquivo.close
     break
 
@@ -49,10 +49,10 @@ exit
 pygame.init()
 
 pygame.mixer.music.set_volume(0.1)
-musica_de_fundo = pygame.mixer.music.load('settings\BoxCat Games - CPU Talk.mp3')
+musica_de_fundo = pygame.mixer.music.load('assets\BoxCat Games - CPU Talk.mp3')
 pygame.mixer.music.play(-1)
 
-barulho_colisao = pygame.mixer.Sound('settings\smw_coin.wav')
+barulho_colisao = pygame.mixer.Sound('assets\smw_coin.wav')
 
 largura = 640
 altura = 480
